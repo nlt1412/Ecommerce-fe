@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import HomePage from '../pages/HomePage/HomePage';
 import OrderPage from '../pages/OrderPage/OrderPage';
 import ProductsPage from '../pages/ProductsPage/ProductsPage';
@@ -84,3 +85,18 @@ export const routes = [
     page: NotFoundPage,
   }
 ];
+=======
+const UserRouter = require('./UserRouter');
+const ProductRouter = require('./ProductRouter');
+const OrderRouter = require('./OrderRouter');
+const PaymentRouter = require('./PaymentRouter');
+
+const routes = (app) => {
+  app.use('/api/user', UserRouter);
+  app.use('/api/product', ProductRouter);
+  app.use('/api/order', OrderRouter);
+  app.use('/api/payment', PaymentRouter);
+}
+
+module.exports = routes;
+>>>>>>> a043e0286a9e60b3252334033f59332ab987d9df
